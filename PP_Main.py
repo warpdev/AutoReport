@@ -256,14 +256,6 @@ class MyWindow(QMainWindow, form_class):
     def feedbackFieldHandler(self):
         config[self.getCurrentClass()]['students'][self.getCurrentStudent()]['feedback'] = self.feedbackField.toPlainText()
 
-    def OpenFolder(self, Path):
-        file_to_show = Path
-        subprocess.call(["open", "-R", file_to_show])
-
-    def CopySth(self, Text): # 클립보드에 
-        cb = QApplication.clipboard()
-        cb.clear(mode=cb.Clipboard)
-        cb.setText(Text, mode=cb.Clipboard)
 
     def getCurrentClass(self):
         return myClasses[self.classList.currentIndex().row()]
@@ -299,43 +291,7 @@ class MyWindow(QMainWindow, form_class):
 
         #load comment, special
         self.classSpecialField.setPlainText(config[self.getCurrentClass()]['classSpecial'])
-        self.classCommentField.setPlainText(config[self.getCurrentClass()]['classComment'])
-
-    def Write_KakaoTalk(self):
-        cur_date = QDate.currentDate()
-        str_date = cur_date.toString("MM.dd(ddd) ")
-        file_name = str_date+self.lineEdit.text()
-        homework_text = "(숙제) "+self.plainTextEdit_4.toPlainText()+"\n\n"
-        first_line = '“안녕하세요?\n메이킷코드랩 코딩학원입니다.\n\n'
-        end_line = '\n\n메이킷코드랩 홈페이지 http://makitcodelab.com\n송도센터 032-833-0046\n대치센터 02-6243-5000"'
-        class_text = self.plainTextEdit_2.toPlainText()
-        student_text = self.plainTextEdit_3.toPlainText()
-
-        path = '/Users/myeongho/MyeongHo_/Codes/메이킷코드/KAKAOTALK/'+str_date
-        try:
-            if not os.path.exists(path):
-                os.makedirs(path)
-        except OSError:
-            print ('Error: Creating directory. ' +  path)
-
-
-        if (self.lineEdit.text()== ""):
-            file_name = str_date + '(임시저장)'
-        
-        f = open(path+'/'+file_name+'.txt', 'w', encoding= 'UTF8')
-        if (self.checkBox.isChecked()==False):
-            msg = first_line+class_text+"\n\n"+student_text+end_line
-            f.write(msg)
-            f.close()
-        else:
-            msg = first_line + homework_text+class_text+'\n\n'+student_text+end_line
-            f.write(msg)
-            f.close()
-        
-        self.lineEdit.setText('')
-
-    def open_kakaoTalk(self):
-        self.OpenFolder("/Users/myeongho/MyeongHo_/Codes/메이킷코드/KAKAOTALK")
+        self.classCommentField.setPlainText(config[self.getCurrentClass()]['classComment']);
 
     def autoxl(self):
         global myClasses, myStudents
