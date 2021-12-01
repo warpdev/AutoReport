@@ -1,0 +1,5 @@
+savedata.json
+__pycache__
+build
+dist
+*.pptx
