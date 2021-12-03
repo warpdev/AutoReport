@@ -1,14 +1,16 @@
 # AutoReport
 
-## Require
-Mac os
-
 ## Features
-- Auto KakaoTalk Send
+- Auto KakaoTalk Send (for Mac only now)
 - auto Daily report generation
 - 2 type of excel file auto generation
 - Auto generate readme.txt
 - save Classes and Students info with json
+
+## Requirement
+- Python3
+- PyQt
+- You need a dailyReport pptx file includes the layout of slide form, for auto daily report generate.
 
 ## How to Use
 1. `git clone https://github.com/warpdev/AutoReport.git`
