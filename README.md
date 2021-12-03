@@ -1,19 +1,22 @@
 # AutoReport
 
-## Require
-Mac os
-
 ## Features
-- Auto KakaoTalk Send
+- Auto KakaoTalk Send (for Mac only now)
 - auto Daily report generation
 - 2 type of excel file auto generation
 - Auto generate readme.txt
 - save Classes and Students info with json
 
+## Requirement
+- Python3
+- PyQt
+- You need a dailyReport pptx file includes the layout of slide form, for auto daily report generate.
+
 ## How to Use
 1. `git clone https://github.com/warpdev/AutoReport.git`
 2. edit the path in `PP_Main.py` to your report file folder
-3. run!
+3. create `savedata.json` and `path.json`, then fill the content of them with `{}`
+4. run!
 
 ## savedata.json example
 ```json
@@ -36,7 +39,7 @@ Mac os
 		"folderName": "10시_classname_who",
 		"classComment": "",
 		"classSpecial": "",
-		"excelCol": 4,
+		"excelCol": D,
 		"classHomework": "풀던 문제 마무리해서 풀어오기",
 		"noHomework": false
 	}
