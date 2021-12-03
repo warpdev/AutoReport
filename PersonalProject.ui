@@ -6,466 +6,424 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>842</width>
-    <height>858</height>
+    <width>937</width>
+    <height>943</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="kakaoNameField">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>490</y>
-      <width>201</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="placeholderText">
-     <string>카톡 이름</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="sendKakaoButton">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>790</y>
-      <width>113</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>**카톡전송**</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="noKakaoCheck">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>490</y>
-      <width>51</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>카톡X</string>
-    </property>
-   </widget>
-   <widget class="QListView" name="studentList">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>10</y>
-      <width>171</width>
-      <height>311</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="saveExcel">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>790</y>
-      <width>113</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>엑셀 저장</string>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_6">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>120</y>
-      <width>401</width>
-      <height>111</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>특이사항</string>
-    </property>
-    <widget class="QPlainTextEdit" name="classSpecialField">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>381</width>
-       <height>71</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QPushButton" name="addStudentButton">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>320</y>
-      <width>81</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>학생추가</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="removeStudentButton">
-    <property name="geometry">
-     <rect>
-      <x>740</x>
-      <y>320</y>
-      <width>81</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>학생삭제</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="isHome">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>490</y>
-      <width>51</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>결석</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="saveReadmeButton">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>790</y>
-      <width>113</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>수업자료 저장</string>
-    </property>
-   </widget>
-   <widget class="QListView" name="classList">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>211</width>
-      <height>311</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="saveFeedback">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>790</y>
-      <width>113</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>저장</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="feedbackField">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>510</y>
-      <width>801</width>
-      <height>271</height>
-     </rect>
-    </property>
-    <property name="placeholderText">
-     <string>피드백 작성</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="addClassButton">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>360</y>
-      <width>91</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>반추가</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="savePPT">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>790</y>
-      <width>113</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ppt저장(all)</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="removeClassButton">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>360</y>
-      <width>91</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>반삭제</string>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_5">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>10</y>
-      <width>401</width>
-      <height>111</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>진도</string>
-    </property>
-    <widget class="QPlainTextEdit" name="classCommentField">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>381</width>
-       <height>71</height>
-      </rect>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="homeworkField">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>230</y>
-      <width>401</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>숙제</string>
-    </property>
-    <widget class="QPlainTextEdit" name="classHomeworkField">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>381</width>
-       <height>71</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="noHomeworkCheck">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>100</y>
-       <width>51</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>숙제X</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QListView" name="fileList">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>400</y>
-      <width>271</width>
-      <height>81</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="addFileButton">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>400</y>
-      <width>91</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>파일 추가</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="removeFileButton">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>430</y>
-      <width>91</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>파일 삭제</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="classColField">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>340</y>
-      <width>211</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="inputMask">
-     <string/>
-    </property>
-    <property name="placeholderText">
-     <string>진도표 인덱스</string>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>360</y>
-      <width>421</width>
-      <height>141</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>경로 설정</string>
-    </property>
-    <widget class="QLineEdit" name="feedbackPathField">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>231</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="inputMask">
-      <string/>
-     </property>
-     <property name="placeholderText">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="setFeedbackPathButton">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>20</y>
-       <width>161</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>카톡피드백 엑셀 경로 설정</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="jindoPathField">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>50</y>
-       <width>231</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="inputMask">
-      <string/>
-     </property>
-     <property name="placeholderText">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="setJindoPathButton">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>50</y>
-       <width>161</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>진도표 엑셀 경로 설정</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="setDailyReportPathButton">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>80</y>
-       <width>161</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>데일리 보고서 ppt 경로 설정</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="dailyReportPathField">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>80</y>
-       <width>231</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="inputMask">
-      <string/>
-     </property>
-     <property name="placeholderText">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="setNASPathButton">
-     <property name="geometry">
-      <rect>
-       <x>250</x>
-       <y>110</y>
-       <width>161</width>
-       <height>32</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>나스 결과보고 경로 설정</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="NASPathField">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>110</y>
-       <width>231</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="inputMask">
-      <string/>
-     </property>
-     <property name="placeholderText">
-      <string/>
-     </property>
-    </widget>
-   </widget>
+   <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,1,2,0">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,2,1">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0,0">
+        <item>
+         <widget class="QListView" name="classList">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="classColField">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="inputMask">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>진도표 인덱스</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
+          <item>
+           <widget class="QPushButton" name="addClassButton">
+            <property name="text">
+             <string>반추가</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="removeClassButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>반삭제</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>진도</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QPlainTextEdit" name="classCommentField">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>60</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>특이사항</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QPlainTextEdit" name="classSpecialField">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>60</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="homeworkField">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>숙제</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,0">
+           <item row="0" column="0">
+            <widget class="QPlainTextEdit" name="classHomeworkField">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>60</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QCheckBox" name="noHomeworkCheck">
+             <property name="text">
+              <string>숙제X</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,0">
+        <item>
+         <widget class="QListView" name="studentList">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QPushButton" name="addStudentButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>학생추가</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="removeStudentButton">
+            <property name="text">
+             <string>학생삭제</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_10">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QListView" name="fileList"/>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QPushButton" name="addFileButton">
+              <property name="text">
+               <string>파일 추가</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="removeFileButton">
+              <property name="text">
+               <string>파일 삭제</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QCheckBox" name="isHome">
+            <property name="text">
+             <string>결석</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="kakaoNameField">
+            <property name="placeholderText">
+             <string>카톡 이름</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="noKakaoCheck">
+            <property name="text">
+             <string>카톡X</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>경로 설정</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="1" column="1">
+          <widget class="QPushButton" name="setFeedbackPathButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>카톡피드백 엑셀 경로 설정</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLineEdit" name="dailyReportPathField">
+           <property name="inputMask">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLineEdit" name="jindoPathField">
+           <property name="inputMask">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QPushButton" name="setJindoPathButton">
+           <property name="text">
+            <string>진도표 엑셀 경로 설정</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QPushButton" name="setDailyReportPathButton">
+           <property name="text">
+            <string>데일리 보고서 ppt 경로 설정</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QPushButton" name="setNASPathButton">
+           <property name="text">
+            <string>나스 결과보고 경로 설정</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLineEdit" name="NASPathField">
+           <property name="inputMask">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLineEdit" name="feedbackPathField">
+           <property name="inputMask">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPlainTextEdit" name="feedbackField">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>피드백 작성</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <item>
+       <widget class="QPushButton" name="saveFeedback">
+        <property name="text">
+         <string>저장</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="sendKakaoButton">
+        <property name="text">
+         <string>**카톡전송**</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="saveExcel">
+        <property name="text">
+         <string>엑셀 저장</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="savePPT">
+        <property name="text">
+         <string>ppt저장(all)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="saveReadmeButton">
+        <property name="text">
+         <string>수업자료 저장</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

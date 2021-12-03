@@ -1,20 +1,12 @@
-from distutils.spawn import spawn
-from inspect import getcallargs
 import os
-from readline import get_current_history_length
 import sys
-from tkinter import E
-from turtle import home
-import webbrowser
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-from PyQt5.QtCore import QDate, QLocale, Qt, QModelIndex
+from PyQt5.QtCore import QDate, QLocale, Qt, QModelIndex, QSize
 from PyQt5 import uic
 from openpyxl import load_workbook
 from openpyxl.styles import Border, Side, PatternFill, Font
 from openpyxl.utils.cell import coordinate_from_string, column_index_from_string
-import subprocess
-import configparser
 import shutil
 import json
 from subprocess import Popen, PIPE
@@ -30,11 +22,11 @@ myClasses =[]
 myStudents = []
 myFiles = []
 constDay = ['월', '화', '수', '목', '금', '토', '일']
-with open('savedata.json', 'r',encoding='UTF-8') as f:
+with open(os.getcwd() + '/savedata.json', 'r',encoding='UTF-8') as f:
     json_data = json.load(f)
 config = json_data
 
-with open('path.json', 'r',encoding='UTF-8') as f:
+with open(os.getcwd() + '/path.json', 'r',encoding='UTF-8') as f:
     path_data = json.load(f)
 pathConfig = path_data
     
@@ -70,7 +62,7 @@ on splitText(theText, theDelimiter)
         return theTextItems
 end splitText
 '''
-form_class = uic.loadUiType("/Users/uhyeon/Downloads/아카이브/PersonalProject.ui")[0]
+form_class = uic.loadUiType(os.getcwd() + "/PersonalProject.ui")[0]
 
 class MyWindow(QMainWindow, form_class):
 
@@ -80,7 +72,8 @@ class MyWindow(QMainWindow, form_class):
         super().__init__()
         
         self.setWindowTitle("메이킷코드랩")
-        self.setWindowIcon(QIcon("/Users/uhyeon/Downloads/아카이브/PP_icon.jpg"))
+        self.setWindowIcon(QIcon(os.getcwd() + "/PP_icon.jpg"))
+
 
         self.setupUi(self)
 
@@ -173,13 +166,14 @@ class MyWindow(QMainWindow, form_class):
         if not config[self.getCurrentClass()].get('noHomework', False):
                 readme += "숙제 : " + config[self.getCurrentClass()]['classHomework'] + "\n"
 
-        reportDir = "report/" + config[self.getCurrentClass()]['folderName']
+        reportDir = os.getcwd() + "/report/" + config[self.getCurrentClass()]['folderName']
 
         if not os.path.exists(reportDir):
             os.makedirs(reportDir)
 
         #initialize
-        shutil.rmtree(reportDir)
+        for file in os.scandir(reportDir):
+            os.remove(file.path)
         
         with open(reportDir+'/readme.txt', 'w+', encoding='UTF-8') as f:
             f.write(readme)
@@ -360,10 +354,10 @@ class MyWindow(QMainWindow, form_class):
         stdout, stderr = p.communicate(kakaotalkScript.encode('utf-8'))
 
     def saveFeedbackHandler(self):
-        with open('savedata.json', 'w',encoding='UTF-8') as f:
+        with open(os.getcwd() + '/savedata.json', 'w',encoding='UTF-8') as f:
             json.dump(config, f, ensure_ascii=False)
         
-        with open('path.json', 'w',encoding='UTF-8') as f:
+        with open(os.getcwd() + '/path.json', 'w',encoding='UTF-8') as f:
             json.dump(pathConfig, f, ensure_ascii=False)
 
     def feedbackFieldHandler(self):
