@@ -1,4 +1,4 @@
-savedata.json
+*.json
 __pycache__
 build
 dist

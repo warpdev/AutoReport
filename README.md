@@ -12,7 +12,7 @@ Mac os
 
 ## How to Use
 1. `git clone https://github.com/warpdev/AutoReport.git`
-2. edit the path in PP_Main.py to your report file folder
+2. edit the path in `PP_Main.py` to your report file folder
 3. run!
 
 ## savedata.json example
