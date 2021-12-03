@@ -96,6 +96,9 @@ class MyWindow(QMainWindow, form_class):
 
         self.classCommentField.textChanged.connect(self.classCommentFieldHandler)
         self.classSpecialField.textChanged.connect(self.classSpecialFieldHandler)
+        self.classHomeworkField.textChanged.connect(self.classHomeworkFieldHandler)
+
+        self.noHomeworkCheck.stateChanged.connect(self.noHomeworkCheckHandler)
 
         self.isHome.stateChanged.connect(self.isHomeHandler)
 
@@ -103,6 +106,7 @@ class MyWindow(QMainWindow, form_class):
         self.sendKakaoButton.clicked.connect(self.allStudentSendKakao)
         self.saveExcel.clicked.connect(self.autoxl)
         self.savePPT.clicked.connect(self.autoppt)
+        self.saveReadmeButton.clicked.connect(self.saveReadme)
 
         self.noKakaoCheck.clicked.connect(self.noKakaoCheckHandler)
         self.kakaoNameField.textChanged.connect(self.kakaoNameFieldHandler)
@@ -118,6 +122,27 @@ class MyWindow(QMainWindow, form_class):
     #     i = 1
     #     for filename in os.listdir(path):
     #         os.rename(path+filename, path+str(cName))
+
+    def noHomeworkCheckHandler(self):
+        global config
+        config[self.getCurrentClass()]['noHomework'] = self.noHomeworkCheck.isChecked()
+
+    def saveReadme(self):
+        homePeople = []
+        for student in config[self.getCurrentClass()]['students']:
+                if config[self.getCurrentClass()]['students'][student]['isHome']:
+                    homePeople.append(student + " 결석")
+        readme = "진도 : " + config[self.getCurrentClass()]['classComment'] + "\n" \
+                + "결석 : " + ", ".join(homePeople) + "\n" 
+        if not config[self.getCurrentClass()].get('noHomework', False):
+                readme += "숙제 : " + config[self.getCurrentClass()]['classHomework'] + "\n"
+
+        if not os.path.exists("report/" + config[self.getCurrentClass()]['folderName']):
+            os.makedirs("report/" + config[self.getCurrentClass()]['folderName'])
+     
+        with open("report/" + config[self.getCurrentClass()]['folderName']+'/readme.txt', 'w+', encoding='UTF-8') as f:
+            f.write(readme)
+        
     def addClassHandler(self):
         uclassName, ok = QInputDialog.getText(self, '반 추가', '반 이름 입력:')
         if ok:
@@ -238,6 +263,9 @@ class MyWindow(QMainWindow, form_class):
     def classCommentFieldHandler(self):
         config[self.getCurrentClass()]['classComment'] = self.classCommentField.toPlainText()
 
+    def classHomeworkFieldHandler(self):
+        config[self.getCurrentClass()]['classHomework'] = self.classHomeworkField.toPlainText()
+
     def allStudentSendKakao(self):
         for x in myStudents:
             if config[self.getCurrentClass()]['students'][x]['isHome'] or config[self.getCurrentClass()]['students'][x]['noKakao']:
@@ -291,7 +319,9 @@ class MyWindow(QMainWindow, form_class):
 
         #load comment, special
         self.classSpecialField.setPlainText(config[self.getCurrentClass()]['classSpecial'])
-        self.classCommentField.setPlainText(config[self.getCurrentClass()]['classComment']);
+        self.classCommentField.setPlainText(config[self.getCurrentClass()]['classComment'])
+        self.classHomeworkField.setPlainText(config[self.getCurrentClass()].get('classHomework', ''))
+        self.noHomeworkCheck.setChecked(config[self.getCurrentClass()].get('noHomework', False))
 
     def autoxl(self):
         global myClasses, myStudents
