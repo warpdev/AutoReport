@@ -337,92 +337,134 @@
      <string>진도표 인덱스</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="setFeedbackPathButton">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>390</y>
-      <width>161</width>
-      <height>32</height>
+      <x>400</x>
+      <y>360</y>
+      <width>421</width>
+      <height>141</height>
      </rect>
     </property>
-    <property name="text">
-     <string>카톡피드백 엑셀 경로 설정</string>
+    <property name="title">
+     <string>경로 설정</string>
     </property>
-   </widget>
-   <widget class="QPushButton" name="setJindoPathButton">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>420</y>
-      <width>161</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>진도표 엑셀 경로 설정</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="setDailyReportPathButton">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>450</y>
-      <width>161</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>데일리 보고서 ppt 경로 설정</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="feedbackPathField">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>390</y>
-      <width>231</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="inputMask">
-     <string/>
-    </property>
-    <property name="placeholderText">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="jindoPathField">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>420</y>
-      <width>231</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="inputMask">
-     <string/>
-    </property>
-    <property name="placeholderText">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="dailyReportPathField">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>450</y>
-      <width>231</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="inputMask">
-     <string/>
-    </property>
-    <property name="placeholderText">
-     <string/>
-    </property>
+    <widget class="QLineEdit" name="feedbackPathField">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>231</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="setFeedbackPathButton">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>20</y>
+       <width>161</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>카톡피드백 엑셀 경로 설정</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="jindoPathField">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>231</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="setJindoPathButton">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>50</y>
+       <width>161</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>진도표 엑셀 경로 설정</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="setDailyReportPathButton">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>80</y>
+       <width>161</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>데일리 보고서 ppt 경로 설정</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="dailyReportPathField">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>231</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="setNASPathButton">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>110</y>
+       <width>161</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>나스 결과보고 경로 설정</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="NASPathField">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>231</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="inputMask">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>

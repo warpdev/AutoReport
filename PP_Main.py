@@ -82,7 +82,6 @@ class MyWindow(QMainWindow, form_class):
         self.setWindowTitle("메이킷코드랩")
         self.setWindowIcon(QIcon("/Users/uhyeon/Downloads/아카이브/PP_icon.jpg"))
 
-
         self.setupUi(self)
 
         myClasses = list(config.keys())
@@ -92,6 +91,7 @@ class MyWindow(QMainWindow, form_class):
         self.feedbackPathField.setText(pathConfig.get('feedbackPath', ''))
         self.jindoPathField.setText(pathConfig.get('jindoPath', ''))
         self.dailyReportPathField.setText(pathConfig.get('dailyReportPath', ''))
+        self.NASPathField.setText(pathConfig.get('NASPath', ''))
         
 
         self.classList.setModel(classListModel)
@@ -119,6 +119,7 @@ class MyWindow(QMainWindow, form_class):
         self.setFeedbackPathButton.clicked.connect(self.setFeedbackPathButtonHandler)
         self.setJindoPathButton.clicked.connect(self.setJindoPathButtonHandler)
         self.setDailyReportPathButton.clicked.connect(self.setDailyReportPathButtonHandler)
+        self.setNASPathButton.clicked.connect(self.setNASPathButtonHandler)
 
         self.saveFeedback.clicked.connect(self.saveFeedbackHandler)
         self.sendKakaoButton.clicked.connect(self.allStudentSendKakao)
@@ -263,6 +264,14 @@ class MyWindow(QMainWindow, form_class):
             pathConfig['dailyReportPath'] = dailyReportPath
             self.dailyReportPathField.setText(dailyReportPath)
     
+    def setNASPathButtonHandler(self):
+        global pathConfig
+        NASPath= QFileDialog.getExistingDirectory(self, '폴더 선택', '', QFileDialog.ShowDirsOnly)
+        ok = True
+        if ok:
+            pathConfig['NASPath'] = NASPath
+            self.NASPathField.setText(NASPath)
+
     def isHomeHandler(self):
         if self.isHome.isChecked():
             config[self.getCurrentClass()]['students'][self.getCurrentStudent()]['isHome'] = True
@@ -494,7 +503,6 @@ class MyWindow(QMainWindow, form_class):
 
 
         wb.save(pathConfig.get('jindoPath',''))
-
         
     def inquiry(self):
         cur_date = QDate.currentDate()
